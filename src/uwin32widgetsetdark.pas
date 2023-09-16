@@ -1036,14 +1036,14 @@ begin
     begin
       Element:= Index;
       
-      //background color of node for nonfocused TreeView
+      //background color of node for nonfocused TreeView (thanks @klaus101 for the fix)
       if Element = teTreeview then begin
         if iStateId = TREIS_SELECTEDNOTFOCUS then begin
            LCanvas:= TCanvas.Create;
            try
              LCanvas.Handle:= hdc;
              AColor:= SysColor[COLOR_BTNFACE];
-             FillGradient(hdc, Lighter(AColor, 154), Lighter(AColor, 156), pRect, GRADIENT_FILL_RECT_V);
+             FillGradient(hdc, Lighter(AColor, 145), Lighter(AColor, 145), pRect, GRADIENT_FILL_RECT_V);
            finally
              LCanvas.Handle:= 0;
              LCanvas.Free;
