@@ -1046,6 +1046,23 @@ begin
     if Theme[Index] = hTheme then
     begin
       Element:= Index;
+
+      // more vivid background color of node for nonfocused TreeView
+      if Element = teTreeview then begin
+        if iStateId = TREIS_SELECTEDNOTFOCUS then begin
+           LCanvas:= TCanvas.Create;
+           try
+             LCanvas.Handle:= hdc;
+             AColor:= SysColor[COLOR_BTNFACE];
+             FillGradient(hdc, Lighter(AColor, 145), Lighter(AColor, 145), pRect, GRADIENT_FILL_RECT_V);
+           finally
+             LCanvas.Handle:= 0;
+             LCanvas.Free;
+           end;
+           exit;
+        end;
+      end;
+
       if Element = teScrollBar then begin
         Element:= Index;
       end else if Element = teHeader then begin
