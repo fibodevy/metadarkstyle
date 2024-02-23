@@ -49,7 +49,7 @@ var
  Node:TMSet.PNode;
 begin
  Pair.Key:=key;
- Node:=FSet.NFind(Pair);
+ //Node:=FSet.NFind(Pair);
  if Node=nil then
    result:=nil
  else
