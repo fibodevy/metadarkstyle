@@ -173,7 +173,7 @@ begin
   DefaultDark.DrawControl.BorderStyleOverride:=          True;
   DefaultDark.DrawControl.CustomDrawPushButtons:=        False;
   DefaultDark.DrawControl.CustomDrawComboBoxs:=          False;
-  DefaultDark.DrawControl.CustomDrawTreeViews:=          False;
+  DefaultDark.DrawControl.CustomDrawTreeViews:=          True;
 
   DefaultWhite.SysColor[COLOR_SCROLLBAR]:=               GetSysColor(COLOR_SCROLLBAR);
   DefaultWhite.SysColor[COLOR_BACKGROUND]:=              GetSysColor(COLOR_BACKGROUND);
