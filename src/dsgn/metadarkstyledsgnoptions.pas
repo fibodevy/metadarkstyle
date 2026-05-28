@@ -165,5 +165,8 @@ begin
   LUIncreaseChangeStamp(FChangeStamp);
 end;
 
+finalization
+  FreeAndNil(MetaDarkStyleDSGNOpt);
+
 end.
 
